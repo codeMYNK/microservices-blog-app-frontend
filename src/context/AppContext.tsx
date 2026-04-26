@@ -160,7 +160,7 @@ export const AppProvider: React.FC<AppProviderProps> = ({ children }) => {
     setUser(null);
     setIsAuth(false);
 
-    toast.success("user Logged Out");
+    toast.success("User Logged Out");
   }
 
   useEffect(() => {
