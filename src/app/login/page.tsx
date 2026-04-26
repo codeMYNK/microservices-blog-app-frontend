@@ -48,9 +48,13 @@ const LoginPage = () => {
     }
   };
 
-  const googleLogin = useGoogleLogin({
+const googleLogin = useGoogleLogin({
     onSuccess: responseGoogle,
-    onError: responseGoogle,
+    onError: (errorResponse) => {
+        console.log("Google Login Error:", errorResponse);
+        toast.error("Google Login failed or blocked by browser.");
+        setLoading(false);
+    },
     flow: "auth-code",
   });
 
