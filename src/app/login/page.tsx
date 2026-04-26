@@ -71,7 +71,7 @@ const googleLogin = useGoogleLogin({
             </CardHeader>
             <CardContent>
               {/* Wrapped googleLogin in an arrow function to be safe with TS event handlers */}
-              <Button onClick={() => googleLogin()}>
+              <Button onClick={googleLogin}>
                 Login With Google{" "}
                 <img
                   src={"/google.png"}
